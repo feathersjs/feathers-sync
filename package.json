@@ -34,7 +34,7 @@
   ],
   "scripts": {
     "publish": "git push origin --tags && npm run changelog && git push origin",
-    "changelog": "github_changelog_generator --user feathersjs-ecosystem --project feathers-sync && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
+    "changelog": "github_changelog_generator --user feathersjs --project feathers-sync && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
