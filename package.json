@@ -45,7 +45,7 @@
     "test": "npm run lint && npm run dtslint && npm run coverage",
     "coverage": "nyc npm run mocha"
   },
-  "semistandard": {
+  "standard": {
     "env": [
       "mocha"
     ]
@@ -73,6 +73,7 @@
     "npm-check-updates": "^18.0.1",
     "nyc": "^17.1.0",
     "semantic-release": "^24.2.5",
+    "standard": "^17.1.2",
     "typescript": "^5.8.3"
   },
   "mocha": {
