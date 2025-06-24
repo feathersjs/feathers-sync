@@ -136,7 +136,7 @@ app.configure(
 
 ## How it works
 
-![alt tag](https://raw.githubusercontent.com/PedroMD/feathers-sync/master/feathers-sync%20and%20real-time%20events-60.png)
+![alt tag](https://raw.githubusercontent.com/PedroMD/feathers-sync/master/feathers-sync.png)
 
 ## Caveat: Listening to service events
 
@@ -215,6 +215,6 @@ The `data` for the `sync-in` event should be in the same form as the one that is
 
 ## License
 
-Copyright (c) 2021 Feathers contributors
+Copyright (c) 2025 Feathers contributors
 
 Licensed under the [MIT license](LICENSE).
