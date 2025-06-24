@@ -1,5 +1,5 @@
-const feathers = require('@feathersjs/feathers');
-const sync = require('../../lib');
+const feathers = require('@feathersjs/feathers')
+const sync = require('../../lib')
 
 module.exports = options => {
   return () => feathers()
@@ -7,10 +7,10 @@ module.exports = options => {
     .use('/todo', {
       events: ['custom'],
       async create (data) {
-        return data;
+        return data
       },
       async update (id, data, params) {
-        return data;
+        return data
       }
-    });
-};
+    })
+}

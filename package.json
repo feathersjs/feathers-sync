@@ -19,16 +19,16 @@
   "author": "Feathers contributors (https://feathersjs.com)",
   "contributors": [],
   "engines": {
-    "node": ">= 12"
+    "node": ">= 20"
   },
   "main": "lib/",
-  "types": "types/",
+  "types": "types/index.d.ts",
   "files": [
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
     "lib/**",
-    "types/**",
+    "types/",
     "*.d.ts",
     "*.js"
   ],
@@ -39,13 +39,12 @@
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
     "update-dependencies": "ncu -u",
-    "lint": "semistandard --fix",
-    "dtslint": "dtslint types",
+    "lint": "standard --fix && tsd",
     "mocha": "mocha --recursive test/",
-    "test": "npm run lint && npm run dtslint && npm run coverage",
+    "test": "npm run lint && npm run coverage",
     "coverage": "nyc npm run mocha"
   },
-  "semistandard": {
+  "standard": {
     "env": [
       "mocha"
     ]
@@ -54,27 +53,27 @@
     "src": "src"
   },
   "dependencies": {
-    "amqp-connection-manager": "^4.1.10",
-    "amqplib": "^0.10.3",
-    "debug": "^4.3.4",
+    "amqp-connection-manager": "^4.1.14",
+    "amqplib": "^0.10.8",
+    "debug": "^4.4.1",
     "lodash": "^4.17.21",
-    "nats": "^2.12.1",
-    "redis": "^4.6.4"
+    "nats": "^2.29.3",
+    "redis": "^5.5.6"
   },
   "devDependencies": {
-    "@feathersjs/feathers": "^5.0.0-pre.38",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/npm": "^9.0.2",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "@types/node": "^18.14.0",
-    "bson": "^5.0.1",
-    "dtslint": "^4.2.1",
-    "mocha": "^10.2.0",
-    "npm-check-updates": "^16.7.6",
-    "nyc": "^15.1.0",
-    "semantic-release": "^20.1.0",
-    "semistandard": "^16.0.1",
-    "typescript": "^4.9.5"
+    "@feathersjs/feathers": "^5.0.34",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/node": "^24.0.4",
+    "bson": "^6.10.4",
+    "mocha": "^11.7.1",
+    "npm-check-updates": "^18.0.1",
+    "nyc": "^17.1.0",
+    "semantic-release": "^24.2.5",
+    "standard": "^17.1.2",
+    "tsd": "^0.32.0",
+    "typescript": "^5.8.3"
   },
   "mocha": {
     "timeout": 30000,
