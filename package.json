@@ -22,13 +22,13 @@
     "node": ">= 20"
   },
   "main": "lib/",
-  "types": "types/",
+  "types": "types/index.d.ts",
   "files": [
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
     "lib/**",
-    "types/**",
+    "types/",
     "*.d.ts",
     "*.js"
   ],
@@ -39,10 +39,9 @@
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
     "update-dependencies": "ncu -u",
-    "lint": "standard --fix",
-    "dtslint": "dtslint types",
+    "lint": "standard --fix && tsd",
     "mocha": "mocha --recursive test/",
-    "test": "npm run lint && npm run dtslint && npm run coverage",
+    "test": "npm run lint && npm run coverage",
     "coverage": "nyc npm run mocha"
   },
   "standard": {
@@ -68,12 +67,12 @@
     "@semantic-release/release-notes-generator": "^14.0.3",
     "@types/node": "^24.0.4",
     "bson": "^6.10.4",
-    "dtslint": "^4.2.1",
     "mocha": "^11.7.1",
     "npm-check-updates": "^18.0.1",
     "nyc": "^17.1.0",
     "semantic-release": "^24.2.5",
     "standard": "^17.1.2",
+    "tsd": "^0.32.0",
     "typescript": "^5.8.3"
   },
   "mocha": {
