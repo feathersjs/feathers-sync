@@ -2,41 +2,16 @@
   "verbose": false,
   "tempDirectory": "./coverage/.tmp",
   "semistandard": {
-    "env": [
-      "mocha"
-    ]
+    "env": ["mocha"]
   },
-  "extension": [
-    ".ts",
-    ".tsx",
-    ".js"
-  ],
-  "exclude": [
-    "**/test/*"
-  ],
+  "extension": [".ts", ".tsx", ".js"],
+  "exclude": ["**/test/*"],
   "print": "detail",
-  "reporter": [
-    "html",
-    "text",
-    "text-summary",
-    "lcov"
-  ],
+  "reporter": ["html", "text", "text-summary", "lcov"],
   "watermarks": {
-    "statements": [
-      70,
-      90
-    ],
-    "lines": [
-      70,
-      90
-    ],
-    "functions": [
-      70,
-      90
-    ],
-    "branches": [
-      70,
-      90
-    ]
+    "statements": [70, 90],
+    "lines": [70, 90],
+    "functions": [70, 90],
+    "branches": [70, 90]
   }
 }

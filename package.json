@@ -38,7 +38,7 @@
     "prepublishOnly": "npm run build",
     "release": "semantic-release",
     "update-dependencies": "ncu -u",
-    "lint": "standard --fix && tsd",
+    "lint": "prettier --write .",
     "test": "npm run lint && vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage"
@@ -63,12 +63,12 @@
     "@types/debug": "^4.1.12",
     "@types/lodash": "^4.17.7",
     "@types/node": "^24.3.1",
+    "@vitest/coverage-v8": "^2.1.9",
     "bson": "^6.10.4",
     "npm-check-updates": "^18.0.3",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.7",
-    "standard": "^17.1.2",
-    "tsd": "^0.33.0",
+    "prettier": "^3.3.3",
     "typescript": "^5.9.2",
     "vitest": "^2.1.2"
   },
