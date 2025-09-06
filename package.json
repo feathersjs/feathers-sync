@@ -50,26 +50,26 @@
   },
   "dependencies": {
     "amqp-connection-manager": "^4.1.14",
-    "amqplib": "^0.10.8",
+    "amqplib": "^0.10.9",
     "debug": "^4.4.1",
     "lodash": "^4.17.21",
     "nats": "^2.29.3",
-    "redis": "^5.5.6"
+    "redis": "^5.8.2"
   },
   "devDependencies": {
     "@feathersjs/feathers": "^5.0.34",
     "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.3",
-    "@types/node": "^24.0.4",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/node": "^24.3.1",
     "bson": "^6.10.4",
-    "mocha": "^11.7.1",
-    "npm-check-updates": "^18.0.1",
+    "mocha": "^11.7.2",
+    "npm-check-updates": "^18.0.3",
     "nyc": "^17.1.0",
-    "semantic-release": "^24.2.5",
+    "semantic-release": "^24.2.7",
     "standard": "^17.1.2",
-    "tsd": "^0.32.0",
-    "typescript": "^5.8.3"
+    "tsd": "^0.33.0",
+    "typescript": "^5.9.2"
   },
   "mocha": {
     "timeout": 30000,
