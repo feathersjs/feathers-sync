@@ -15,7 +15,7 @@ jobs:
       - name: Start Redis
         uses: supercharge/redis-github-action@1.1.0
         with:
-          redis-version: "5"
+          redis-version: '5'
       - name: Setup Rabbitmq
         uses: nijel/rabbitmq-action@v1.0.0
       - name: Setup NATS

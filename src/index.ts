@@ -1,18 +1,18 @@
-const { URL } = require('url')
-const core = require('./core')
-const redis = require('./adapters/redis')
-const amqp = require('./adapters/amqp')
-const nats = require('./adapters/nats')
-const adaptors = {
-  core,
+import { URL } from 'url'
+import core, { SYNC } from './core'
+import redis from './adapters/redis'
+import amqp from './adapters/amqp'
+import nats from './adapters/nats'
+import { SyncOptions, AdapterFunction } from './types'
+
+const adaptors: Record<string, AdapterFunction> = {
   nats,
   redis,
   amqp,
   rabbitmq: amqp
 }
 
-const { SYNC } = core
-const init = options => {
+const init = (options: SyncOptions) => {
   const { uri, deserialize, serialize } = options
 
   if (!uri) {
@@ -29,12 +29,13 @@ const init = options => {
 
   const { protocol } = new URL(uri)
   const name = protocol.substring(0, protocol.length - 1)
-  const identifiedProtocolName = Object.keys(adaptors).filter((adaptor) => name.indexOf(adaptor) !== -1 ? adaptor : null)
-  const adapter = adaptors[identifiedProtocolName]
+  const identifiedProtocolName = Object.keys(adaptors).find((adaptor) => name.indexOf(adaptor) !== -1)
 
-  if (!adapter) {
+  if (!identifiedProtocolName) {
     throw new Error(`${name} is an invalid adapter (uri ${uri})`)
   }
+
+  const adapter = adaptors[identifiedProtocolName]!
 
   return adapter({
     serialize: JSON.stringify,
@@ -44,9 +45,7 @@ const init = options => {
   })
 }
 
-module.exports = init
-
-Object.assign(module.exports, adaptors, {
-  default: init,
-  SYNC
-})
+export default init
+export { init, core, redis, amqp, nats, SYNC }
+export const rabbitmq = amqp
+export * from './types'

@@ -1,16 +1,34 @@
 {
   "compilerOptions": {
+    "target": "ES2020",
     "module": "commonjs",
-    "lib": ["es6"],
+    "lib": ["ES2020"],
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "strict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "noEmit": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationDir": "./lib",
+    "sourceMap": true,
 
     // If the library is an external module (uses `export`), this allows your test file to import "mylib" instead of "./index".
     // If the library is global (cannot be imported via `import` or `require`), leave this out.
     "baseUrl": ".",
     "paths": { "feathers-sync": ["types"] }
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "lib", "coverage", "test"]
 }

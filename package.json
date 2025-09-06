@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-mubsub/issues"
+    "url": "https://github.com/feathersjs/feathers-sync/issues"
   },
-  "homepage": "https://github.com/feathersjs/feathers-mubsub",
+  "homepage": "https://github.com/feathersjs/feathers-sync",
   "keywords": [
     "feathers",
     "feathers-plugin",
@@ -21,29 +21,27 @@
   "engines": {
     "node": ">= 20"
   },
-  "main": "lib/",
-  "types": "types/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
     "lib/**",
-    "types/",
+    "src/**",
     "*.d.ts",
     "*.js"
   ],
   "scripts": {
+    "build": "rimraf lib && tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
     "release": "semantic-release",
     "update-dependencies": "ncu -u",
-    "lint": "standard --fix && tsd",
-    "mocha": "mocha --recursive test/",
-    "test": "npm run lint && npm run coverage",
-    "coverage": "nyc npm run mocha"
-  },
-  "standard": {
-    "env": [
-      "mocha"
-    ]
+    "lint": "prettier --write .",
+    "test": "npm run lint && vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "directories": {
     "src": "src"
@@ -61,19 +59,18 @@
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/amqplib": "^0.10.5",
+    "@types/debug": "^4.1.12",
+    "@types/lodash": "^4.17.7",
     "@types/node": "^24.3.1",
+    "@vitest/coverage-v8": "^2.1.9",
     "bson": "^6.10.4",
-    "mocha": "^11.7.2",
     "npm-check-updates": "^18.0.3",
-    "nyc": "^17.1.0",
+    "rimraf": "^6.0.1",
     "semantic-release": "^24.2.7",
-    "standard": "^17.1.2",
-    "tsd": "^0.33.0",
-    "typescript": "^5.9.2"
-  },
-  "mocha": {
-    "timeout": 30000,
-    "exit": true
+    "prettier": "^3.3.3",
+    "typescript": "^5.9.2",
+    "vitest": "^2.1.2"
   },
   "release": {
     "branches": [
