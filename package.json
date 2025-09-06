@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-mubsub/issues"
+    "url": "https://github.com/feathersjs/feathers-sync/issues"
   },
-  "homepage": "https://github.com/feathersjs/feathers-mubsub",
+  "homepage": "https://github.com/feathersjs/feathers-sync",
   "keywords": [
     "feathers",
     "feathers-plugin",
