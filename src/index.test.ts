@@ -1,12 +1,12 @@
 import { feathers } from '@feathersjs/feathers'
 import { describe, it, expect } from 'vitest'
-import sync, { SYNC } from './index'
+import sync, { SYNC, redis, amqp } from './index'
 
 describe('feathers-sync tests', () => {
   it('exports db adapters', () => {
     expect(typeof sync).toBe('function')
-    expect(sync.redis).toBeTruthy()
-    expect(sync.amqp).toBeTruthy()
+    expect(redis).toBeTruthy()
+    expect(amqp).toBeTruthy()
   })
 
   it('throws an error when uri is missing', () => {

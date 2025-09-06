@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest'
-import createApp from './app'
+import createApp from './fixture'
 import { SyncApp } from '../types'
 
 describe('feathers-sync NATS tests', () => {

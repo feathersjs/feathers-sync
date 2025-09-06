@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from 'vitest'
 import * as bson from 'bson'
-import createApp from './app'
+import createApp from './fixture'
 import { SyncApp } from '../types'
 
 describe('feathers-sync AMQP tests', () => {
