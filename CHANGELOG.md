@@ -1,5 +1,15 @@
 # Changelog
 
+## [v3.1.1](https://github.com/feathersjs/feathers-sync/tree/v3.1.1) (2025-01-06)
+
+[Full Changelog](https://github.com/feathersjs/feathers-sync/compare/v3.1.0...v3.1.1)
+
+**Merged pull requests:**
+
+- fix\\(amqp\\): remove event listener when channel is closed [\\#203](https://github.com/feathersjs/feathers-sync/pull/203) ([daffl](https://github.com/daffl))
+- chore: Update all dependencies [\\#205](https://github.com/feathersjs/feathers-sync/pull/205) ([daffl](https://github.com/daffl))
+- chore: Update all dependencies [\\#204](https://github.com/feathersjs/feathers-sync/pull/204) ([daffl](https://github.com/daffl))
+
 ## [v3.1.0](https://github.com/feathersjs/feathers-sync/tree/v3.1.0) (2025-06-24)
 
 [Full Changelog](https://github.com/feathersjs/feathers-sync/compare/v3.0.3...v3.1.0)
