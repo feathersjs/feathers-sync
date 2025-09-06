@@ -1,7 +1,7 @@
 {
   "name": "feathers-sync",
   "description": "Feathers",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/feathersjs-ecosystem/feathers-sync.git"
@@ -58,7 +58,9 @@
   },
   "devDependencies": {
     "@feathersjs/feathers": "^5.0.34",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/node": "^24.3.1",
@@ -82,7 +84,9 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm"
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
     ]
   }
 }
