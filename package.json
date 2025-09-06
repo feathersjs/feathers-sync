@@ -43,11 +43,6 @@
     "test:watch": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "standard": {
-    "env": [
-      "vitest"
-    ]
-  },
   "directories": {
     "src": "src"
   },
